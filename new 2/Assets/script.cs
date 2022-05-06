@@ -15,7 +15,7 @@ public class script : MonoBehaviour
         string p = "C:/words.txt";
         List<string> data = File.ReadAllLines(p).ToList();
         string p1 = "C:/Users/Rushi/output file.txt";
-        using (FileStream f = new FileStream(p1, FileMode.Append, FileAccess.Write))
+        using (FileStream f = new FileStream(p1, FileMode.OpenOrCreate, FileAccess.Write))
         {
             using (StreamWriter w = new StreamWriter(f))
             {
